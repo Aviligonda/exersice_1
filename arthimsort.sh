@@ -8,7 +8,7 @@ art[1]=$(($a*$b+$c));
 art[2]=$(($c+$a/$b));
 art[3]=$(($a%$b+$c));
 echo "before sorting :"${art[@]};
-
+#desendind order
 for ((i=0;i<${#art[@]};i++))
 do
     for ((j=1;j<${#art[@]};j++))
@@ -22,3 +22,17 @@ do
        done
 done
 echo "After sorting  an arry decending :"${art[@]};
+#assending order
+for ((i=0;i<${#art[@]};i++))
+do
+    for ((j=i+1;j<${#art[@]};j++))
+     do
+           if [ ${art[$i]} -gt ${art[$j]} ]
+           then
+                  temp=${art[$i]};
+                  art[$i]=${art[$j]};
+                   art[$j]=$temp;
+            fi
+       done
+done
+   echo "after sorting an array assending:"
