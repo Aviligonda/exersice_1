@@ -8,3 +8,4 @@ art[1]=$(($a*$b+$c));
 art[2]=$(($c+$a/$b));
 art[3]=$(($a%$b+$c));
 echo "before sorting :"${art[@]};
+echo "$a";
